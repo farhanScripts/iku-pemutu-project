@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::prefix('admin')->name("admin.")->group(function() {
-        Route::get('/telusur-data', Telusurdata::class)->name('telusur-data');
+        Route::get('/telusur-data', Telusurdata::class)->name('telusur-data')->middleware('role:admin');
     });
 });
 
