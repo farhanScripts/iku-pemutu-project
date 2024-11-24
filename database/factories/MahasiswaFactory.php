@@ -25,7 +25,7 @@ class MahasiswaFactory extends Factory
             'thn_mulai' => fake()->dateTimeBetween('-6 years', '-4 years'),
             'jenjang_pendidikan' => fake()->randomElement(['S1', 'S2', 'S3']),
             'universitas' => 'Pancasila',
-            'prodi_id' => fake()->numberBetween(1, 10),
+            'prodi_id' => Prodi::factory(),
             'thn_lulus' => fake()->dateTimeBetween('-1 year'),
             'kelas_reg_rk' => fake()->randomElement(['Reguler', 'Non-Reguler']),
             'status_mhs' => fake()->randomElement(['Aktif', 'Cuti', 'DO', 'Lulus']),
