@@ -3,13 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class TingkatPrestasi extends Model
 {
     protected $guarded = ['id'];
 
-    public function prestasi():BelongsTo {
-        return $this->belongsTo(Prestasi::class);
+    public function prestasi(): HasMany {
+        return $this->hasMany(Prestasi::class);
     }
 }

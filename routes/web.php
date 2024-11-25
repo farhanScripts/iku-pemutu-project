@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -11,6 +10,12 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::prefix('akreditasi-univ')->name('akreditasi-univ.')->group(function() {
+    Route::get('/', function () {
+        return view('pemutu-univ.index');
+    });
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -84,5 +89,6 @@ Route::prefix('akreditasi-prodi')->name('akreditasi-prodi.')->group(function() {
         });
     });
 });
+
 
 require __DIR__.'/auth.php';
