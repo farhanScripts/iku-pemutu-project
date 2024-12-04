@@ -39,6 +39,9 @@ Route::prefix('akreditasi-prodi')->name('akreditasi-prodi.')->group(function() {
     })->name('daftar-prodi');
 
     Route::prefix('daftar-prodi')->name('daftar-prodi.')->group(function() {
+        Route::get('d4-{namaJurusan}', function($namaJurusan) {
+            return view('#');
+        })->name('d4');
         Route::get('s1-{namaJurusan}', function($namaJurusan) {
             return view('#');
         })->name('s1');
@@ -51,6 +54,15 @@ Route::prefix('akreditasi-prodi')->name('akreditasi-prodi.')->group(function() {
         Route::get('d3-{namaJurusan}', function($namaJurusan) {
             return view('#');
         })->name('d3');
+
+        Route::prefix('d4-{namaJurusan}')->name('d4.')->group(function() {
+            Route::get('metrik', function($namaJurusan) {
+                return view('#');
+            })->name('metrik');
+            Route::get('metrik/detail/{id}', function($namaJurusan, $id) {
+                return view('#');
+            })->name('metrik-detail');
+        });
 
         Route::prefix('s1-{namaJurusan}')->name('s1.')->group(function() {
             Route::get('metrik', function($namaJurusan) {
