@@ -9,6 +9,18 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
+
+                    <section class="mb-6 flex w-full border border-indigo-900">
+                        {{-- DOWNLOAD DATA DAR DB KE BENTUK EXCEL --}}
+                        <div class="h-[50px] bg-sky-500 w-fit px-[20px] inline-block align-middle rounded-lg">
+                            Download Excel
+                        </div>
+                        {{-- UPLOAD DATA EXCEL DISIMPAN KE DALAM DB --}}
+                       <div>
+                            @livewire('upload-excel-dsn-penelitian')                
+                        </div>                        
+                    </section>
+                 
                     <!-- Dropdown Tahun -->
                     <div class="mb-4">
                         <label for="tahun" class="block text-sm font-medium text-gray-700">Tahun *</label>
@@ -70,18 +82,7 @@
                                     <td class="px-4 py-2 border">Desain Antena Mikrostrip Miniatur sebagai Pendukung Konektivitas LoraWAN</td>
                                     <td class="px-4 py-2 border">1</td>
                                 </tr>
-                                <tr class="bg-white">
-                                    <td class="px-4 py-2 border">3</td>
-                                    <td class="px-4 py-2 border">2023</td>
-                                    <td class="px-4 py-2 border">0313109102</td>
-                                    <td class="px-4 py-2 border">VITHA OCTAVANNY</td>
-                                    <td class="px-4 py-2 border">Universitas Pancasila</td>
-                                    <td class="px-4 py-2 border">2022</td>
-                                    <td class="px-4 py-2 border">Institut Komunikasi Dan Bisnis LSPR</td>
-                                    <td class="px-4 py-2 border">Pengmas</td>
-                                    <td class="px-4 py-2 border">Penyelenggara Acara: Pelatihan dan Sosialisasi Desa Wisata...</td>
-                                    <td class="px-4 py-2 border">1</td>
-                                </tr>
+                                <!-- Tambahkan data lainnya -->
                             </tbody>
                         </table>
                     </div>

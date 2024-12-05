@@ -13,8 +13,8 @@
                     <div class="mb-6">
                         <label for="tahun" class="block text-sm font-medium text-gray-700">Tahun *</label>
                         <select id="tahun" name="tahun" class="mt-1 block w-40 rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
-                            <option>2023</option>
-                            <option>2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2023">2022</option>
                         </select>
                     </div>
                     <!-- Info Section -->

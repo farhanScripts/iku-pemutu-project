@@ -16,8 +16,8 @@ class Dosen extends Model
         return $this->hasOne(Dosen::class);
     }
 
-    public function prodi(): HasMany {
-        return $this->hasMany(Prodi::class);
+    public function prodi(): BelongsTo {
+        return $this->belongsTo(Prodi::class);
     }
 
     public function pekerjaan(): HasOne {

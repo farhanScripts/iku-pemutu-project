@@ -18,7 +18,7 @@ class Prestasi extends Model
         return $this->hasMany(TingkatPrestasi::class);
     }
 
-    public function mahasiswa():BelongsTo {
+    public function mahasiswa():BelongsTo { 
         return $this->belongsTo(Mahasiswa::class);
     }
 }

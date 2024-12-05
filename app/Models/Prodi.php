@@ -10,9 +10,9 @@ class Prodi extends Model
 {
     protected $guarded = ["id"];
 
-    public function dosen(): BelongsTo
+    public function dosen(): HasMany
     {
-        return $this->belongsTo(Prodi::class);
+        return $this->hasMany(Prodi::class);
     }
 
     public function akreditasiProdi(): HasMany {
